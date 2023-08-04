@@ -22,7 +22,6 @@ prompt = PromptTemplate(
     input_variables=["sentences_before_check"],
     template=template,
 )
-
 # OpenAIのAPIにこのプロンプトを送信するためのチェーンを作成
 chain = LLMChain(llm=llm, prompt=prompt, verbose=True)
 
